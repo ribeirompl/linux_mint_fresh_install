@@ -1,5 +1,4 @@
 # Linux Mint 19.3 Cinnamon setup script
-## NB: A folder containing the settings files for the various applets on the panel bar still needs to be added before the script is functional.
 
 A script for setting my favourite settings and installing applications onto a fresh Linux Mint installation.
 
@@ -52,4 +51,5 @@ Then run it: `./general_setup_script.sh`
     + VLC media player
     + Other oh-my-zsh plugins (colorize, command-not-found, dircycle, fasd)
     + oh-my-zsh default prompt setting
+    + rsync
 + Add a restart computer prompt at the end of the script.

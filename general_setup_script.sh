@@ -62,26 +62,26 @@ dconf write /org/cinnamon/desktop/wm/preferences/theme "'Mint-Y-Dark'"
 dconf write /org/cinnamon/desktop/interface/gtk-theme "'Mint-Y-Dark'"
 
 print2screen "Changing calendar settings"
-\cp ./installation_files/.cinnamon/configs/calendar@cinnamon.org/55.json ~/.cinnamon/configs/calendar@cinnamon.org/55.json
+\cp ./setup_files/.cinnamon/configs/calendar@cinnamon.org/55.json ~/.cinnamon/configs/calendar@cinnamon.org/55.json
 
 print2screen "Changing start menu settings"
-\cp ./installation_files/.cinnamon/configs/menu@cinnamon.org/41.json ~/.cinnamon/configs/menu@cinnamon.org/41.json
+\cp ./setup_files/.cinnamon/configs/menu@cinnamon.org/41.json ~/.cinnamon/configs/menu@cinnamon.org/41.json
 
 print2screen "Installing panel applets"
 wget https://cinnamon-spices.linuxmint.com/files/applets/download-and-upload-speed@cardsurf.zip && \
 unzip download-and-upload-speed@cardsurf.zip -d ~/.local/share/cinnamon/applets/ && 
 \rm download-and-upload-speed@cardsurf.zip && \
-\cp ./installation_files/.cinnamon/configs/download-and-upload-speed@cardsurf/download-and-upload-speed@cardsurf.json ~/.cinnamon/configs/download-and-upload-speed@cardsurf/download-and-upload-speed@cardsurf.json
+\cp ./setup_files/.cinnamon/configs/download-and-upload-speed@cardsurf/download-and-upload-speed@cardsurf.json ~/.cinnamon/configs/download-and-upload-speed@cardsurf/download-and-upload-speed@cardsurf.json
 
 wget https://cinnamon-spices.linuxmint.com/files/applets/show-hide-applets@mohammad-sn.zip && \
 unzip show-hide-applets@mohammad-sn.zip -d ~/.local/share/cinnamon/applets/ && 
 \rm show-hide-applets@mohammad-sn.zip && \
-\cp ./installation_files/.cinnamon/configs/show-hide-applets@mohammad-sn/show-hide-applets@mohammad-sn.json ~/.cinnamon/configs/show-hide-applets@mohammad-sn/show-hide-applets@mohammad-sn.json
+\cp ./setup_files/.cinnamon/configs/show-hide-applets@mohammad-sn/show-hide-applets@mohammad-sn.json ~/.cinnamon/configs/show-hide-applets@mohammad-sn/show-hide-applets@mohammad-sn.json
 
 wget https://cinnamon-spices.linuxmint.com/files/applets/pomodoro@gregfreeman.org.zip && \
 unzip pomodoro@gregfreeman.org.zip -d ~/.local/share/cinnamon/applets/ && 
 \rm pomodoro@gregfreeman.org.zip && \
-\cp ./installation_files/.cinnamon/configs/pomodoro@gregfreeman.org/pomodoro@gregfreeman.org.json ~/.cinnamon/configs/pomodoro@gregfreeman.org/pomodoro@gregfreeman.org.json
+\cp ./setup_files/.cinnamon/configs/pomodoro@gregfreeman.org/pomodoro@gregfreeman.org.json ~/.cinnamon/configs/pomodoro@gregfreeman.org/pomodoro@gregfreeman.org.json
 
 print2screen "Changing panel settings"
 dconf write /org/cinnamon/enabled-applets "['panel1:left:0:menu@cinnamon.org:41', 'panel1:left:2:panel-launchers@cinnamon.org:43', 'panel1:left:3:window-list@cinnamon.org:44', 'panel1:right:8:systray@cinnamon.org:45', 'panel1:right:4:xapp-status@cinnamon.org:46', 'panel1:right:9:keyboard@cinnamon.org:47', 'panel1:right:14:notifications@cinnamon.org:48', 'panel1:right:10:printers@cinnamon.org:49', 'panel1:right:12:removable-drives@cinnamon.org:50', 'panel1:right:7:network@cinnamon.org:52', 'panel1:right:13:sound@cinnamon.org:53', 'panel1:right:11:power@cinnamon.org:54', 'panel1:right:16:calendar@cinnamon.org:55', 'panel1:right:15:separator@cinnamon.org:56', 'panel1:right:6:download-and-upload-speed@cardsurf:63', 'panel1:right:3:pomodoro@gregfreeman.org:64', 'panel1:right:5:show-hide-applets@mohammad-sn:71']"
