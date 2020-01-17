@@ -38,4 +38,18 @@ Then run it: `./general_setup_script.sh`
     + Go through other cinnamon application settings such as Nemo.
     + Start redshift service and enable autostart.
     + Remove shortcuts to: show desktop, firefox, terminal, nemo etc. in the panel bar.
+    + Anaconda/Jupyter-Notebooks (and various conda packages)
+    + gtypist (For improving touch typing)
+    + Imagemagick
+    + Inkscape
+    + Kdenlive
+    + GIMP
+    + OBS
+    + openssh
+    + docker (Maybe through VS code)
+    + texlive (LaTeX)
+    + vim
+    + VLC media player
+    + Other oh-my-zsh plugins (colorize, command-not-found, dircycle, fasd)
+    + oh-my-zsh default prompt setting
 + Add a restart computer prompt at the end of the script.
