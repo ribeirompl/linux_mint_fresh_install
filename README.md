@@ -28,15 +28,20 @@ Then run it: `./general_setup_script.sh`
 
 ## Useful Keyboard shortcuts
 + Hold alt, then use left click to drag window, or right click to resize
++ Super+F to open Firefox
++ Super+C to open Chrome
++ Super+D to show Desktop
++ Ctrl+Shift+Esc to open System Monitor
 
 ## Future Plans
 + Updating the script for each major release of Linux Mint Cinnamon.
 + Removing the optional post-script steps and including them in the script.
 + Adding other settings/applications to the script:
+    + Add keyboard shortcut Super+M to minimise current window.
     + See the whatsnew page for the current Linux Mint release.
     + Go through other cinnamon application settings such as Nemo.
     + Start redshift service and enable autostart.
-    + Remove shortcuts to: show desktop, firefox, terminal, nemo etc. in the panel bar.
+    + Remove shortcuts to: show desktop.
     + Anaconda/Jupyter-Notebooks (and various conda packages)
     + gtypist (For improving touch typing)
     + Imagemagick
