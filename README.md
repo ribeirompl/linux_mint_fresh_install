@@ -15,7 +15,7 @@ This sets up git's commit email and username as well as an ssh key for connectin
 Ensure that the script has execute permissions:
 `chmod 744 ./setup_script.sh`
 
-Then run it: `./general_setup_script.sh`
+Then run it within bash: `./general_setup_script.sh`
 
 ## Post-script steps:
 + Restart PC

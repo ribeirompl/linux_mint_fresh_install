@@ -168,12 +168,27 @@ sudo snap install --classic code
 print2screen "Installing xclip"
 sudo apt-get install xclip -y
 
+print2screen "Installing git"
+sudo apt install git -y # Required for installing Oh My Zsh
+
 print2screen "Installing Oh My Zsh and settings"
 sudo apt-get install fonts-powerline -y && \
 sudo apt install zsh -y && \
-sudo apt install git -y && \
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended && \
 chsh -s $(which zsh) # Change default shell
 sudo apt install autojump -y && \
 \cp ./installation_file/.zshrc ~/.zshrc
 
+# TODO check if functional
+print2screen "Installing Anaconda"
+wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O ./anaconda-latest.sh && \
+bash ./anaconda-latest.sh -b -p $HOME/anaconda && \
+\rm ./anaconda-latest.sh && \
+source $HOME/anaconda/bin/activate && \
+conda init bash && \
+conda init zsh
+
+print2screen "Installing python3-dev"
+sudo apt-get install python3-dev # for compiling (make) some python packages in Github
+
+# Now restart and run other scripts
