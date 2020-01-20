@@ -31,7 +31,9 @@ Then run it: `./general_setup_script.sh`
 + Super+F to open Firefox
 + Super+C to open Chrome
 + Super+D to show Desktop
++ Super+M to minimise the current application.
 + Ctrl+Shift+Esc to open System Monitor
++ F2 to rename files/folders.
 
 ## Future Plans
 + Updating the script for each major release of Linux Mint Cinnamon.
@@ -39,7 +41,15 @@ Then run it: `./general_setup_script.sh`
 + Adding other settings/applications to the script:
     + Add keyboard shortcut Super+M to minimise current window.
     + See the whatsnew page for the current Linux Mint release.
-    + Go through other cinnamon application settings such as Nemo.
+    + Go through other application settings
+        + Calendar
+        + Libreoffice suite
+        + Okular
+        + Pix
+        + RhythmBox
+        + Text Editor
+        + VS Code
+        + Thunderbird Mail
     + Start redshift service and enable autostart.
     + Remove shortcuts to: show desktop.
     + Anaconda/Jupyter-Notebooks (and various conda packages)
@@ -57,4 +67,6 @@ Then run it: `./general_setup_script.sh`
     + Other oh-my-zsh plugins (colorize, command-not-found, dircycle, fasd)
     + oh-my-zsh default prompt setting
     + rsync
+    + Set default applications for filetypes such as .md (Markdown)
+    + Create relevant home directories such as "Development" and add to Nemo sidebar
 + Add a restart computer prompt at the end of the script.

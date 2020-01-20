@@ -87,6 +87,7 @@ print2screen "Changing panel settings"
 dconf write /org/cinnamon/enabled-applets "['panel1:left:0:menu@cinnamon.org:41', 'panel1:left:2:panel-launchers@cinnamon.org:43', 'panel1:left:3:window-list@cinnamon.org:44', 'panel1:right:8:systray@cinnamon.org:45', 'panel1:right:4:xapp-status@cinnamon.org:46', 'panel1:right:9:keyboard@cinnamon.org:47', 'panel1:right:14:notifications@cinnamon.org:48', 'panel1:right:10:printers@cinnamon.org:49', 'panel1:right:12:removable-drives@cinnamon.org:50', 'panel1:right:7:network@cinnamon.org:52', 'panel1:right:13:sound@cinnamon.org:53', 'panel1:right:11:power@cinnamon.org:54', 'panel1:right:16:calendar@cinnamon.org:55', 'panel1:right:15:separator@cinnamon.org:56', 'panel1:right:6:download-and-upload-speed@cardsurf:63', 'panel1:right:3:pomodoro@gregfreeman.org:64', 'panel1:right:5:show-hide-applets@mohammad-sn:71']"
 
 print2screen "Changing misc. Cinnamon settings"
+touch ~/.linuxmint/mintwelcome/norun.flag # Disable welcome screen at startup
 dconf write /org/cinnamon/desktop/interface/clock-show-date true
 dconf write /org/nemo/desktop/volumes-visible false
 dconf write /org/nemo/desktop/home-icon-visible false
@@ -99,6 +100,7 @@ dconf write /org/cinnamon/desktop/session/idle-delay "uint32 900"
 dconf write /org/cinnamon/desktop/screensaver/date-format "'%d %b %Y'"
 dconf write /org/cinnamon/desktop/screensaver/use-custom-format true
 dconf write /org/cinnamon/desktop/screensaver/show-album-art false
+dconf write /org/cinnamon/desktop/screensaver/allow-media-control false
 dconf write /org/cinnamon/alttab-switcher-style "'thumbnails'"
 dconf write /org/cinnamon/desktop/wm/preferences/num-workspaces 2
 
@@ -109,6 +111,7 @@ dconf write /org/nemo/preferences/quick-renames-with-pause-in-between false
 dconf write /org/nemo/preferences/show-compact-view-icon-toolbar false
 dconf write /org/nemo/preferences/show-open-in-terminal-toolbar true
 dconf write /org/nemo/list-view/default-visible-columns "['name', 'size', 'type', 'date_modified', 'owner', 'permissions']"
+dconf write /org/nemo/preferences/ignore-view-metadata true # Each folder is displayed the same way
 # dconf write /org/nemo/preferences/show-advanced-permissions true # Unwanted currently, but maybe in the future
 
 print2screen "Changing Keyboard settings"
@@ -131,12 +134,15 @@ dconf write /org/cinnamon/desktop/keybindings/custom-keybindings/custom0/name "'
 dconf write /org/cinnamon/desktop/keybindings/custom-keybindings/custom0/command "'firefox'"
 dconf write /org/cinnamon/desktop/keybindings/custom-keybindings/custom0/binding "['<Super>f']"
 dconf write /org/cinnamon/desktop/keybindings/custom-keybindings/custom1/name "'Launch Chrome'"
-dconf write /org/cinnamon/desktop/keybindings/custom-keybindings/custom1/command "'/usr/bin/google-chrome/stable %U'"
+dconf write /org/cinnamon/desktop/keybindings/custom-keybindings/custom1/command "'/usr/bin/google-chrome-stable %U'"
 dconf write /org/cinnamon/desktop/keybindings/custom-keybindings/custom1/binding "['<Super>c']"
 dconf write /org/cinnamon/desktop/keybindings/custom-keybindings/custom2/name "'Launch System Monitor'"
 dconf write /org/cinnamon/desktop/keybindings/custom-keybindings/custom2/command "'gnome-system-monitor'"
 dconf write /org/cinnamon/desktop/keybindings/custom-keybindings/custom2/binding "['<Primary><Shift>Escape']"
 dconf write /org/cinnamon/desktop/keybindings/custom-list "['custom0', 'custom1', 'custom2']"
+dconf write /org/cinnamon/desktop/keybindings/wm/minimize "['<Super>m']"
+
+print2screen "Changing Cinnamon sound settings"
 dconf write /org/cinnamon/sounds/login-enabled false
 dconf write /org/cinnamon/sounds/logout-enabled false
 dconf write /org/cinnamon/sounds/switch-enabled false
@@ -152,7 +158,7 @@ sudo apt install okular -y
 
 print2screen "Installing Google Chrome"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-aboutsudo dpkg -i google-chrome-stable_current_amd64.deb && \
+sudo dpkg -i google-chrome-stable_current_amd64.deb && \
 \rm google-chrome-stable_current_amd64.deb
 
 print2screen "Installing VSCode"
