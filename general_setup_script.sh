@@ -179,7 +179,6 @@ chsh -s $(which zsh) # Change default shell
 sudo apt install autojump -y && \
 \cp ./installation_file/.zshrc ~/.zshrc
 
-# TODO check if functional
 print2screen "Installing Anaconda"
 wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O ./anaconda-latest.sh && \
 bash ./anaconda-latest.sh -b -p $HOME/anaconda && \

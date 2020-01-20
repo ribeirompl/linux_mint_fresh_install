@@ -39,7 +39,6 @@ Then run it within bash: `./general_setup_script.sh`
 + Updating the script for each major release of Linux Mint Cinnamon.
 + Removing the optional post-script steps and including them in the script.
 + Adding other settings/applications to the script:
-    + Add keyboard shortcut Super+M to minimise current window.
     + See the whatsnew page for the current Linux Mint release.
     + Go through other application settings
         + Calendar
