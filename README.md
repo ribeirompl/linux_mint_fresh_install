@@ -7,6 +7,10 @@ The repository contains 2 scripts:
 This installs general applications and changes system settings.
 + `git_setup_script.sh`
 This sets up git's commit email and username as well as an ssh key for connecting to Github.
++ `conda_setup_script.sh`
+This sets up Anaconda and installs some packages.
++ `pynetkey_setup_script.sh`
+This sets up Pynetkey as well as a desktop icon to easily run it.
 
 ## Pre-script steps:
 + Launch Driver Manager to install relevant drivers.

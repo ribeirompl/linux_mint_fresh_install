@@ -179,15 +179,7 @@ chsh -s $(which zsh) # Change default shell
 sudo apt install autojump -y && \
 \cp ./installation_file/.zshrc ~/.zshrc
 
-print2screen "Installing Anaconda"
-wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O ./anaconda-latest.sh && \
-bash ./anaconda-latest.sh -b -p $HOME/anaconda && \
-\rm ./anaconda-latest.sh && \
-source $HOME/anaconda/bin/activate && \
-conda init bash && \
-conda init zsh
-
 print2screen "Installing python3-dev"
-sudo apt-get install python3-dev # for compiling (make) some python packages in Github
+sudo apt-get install python3-dev # for compiling (make) some python packages in Github? #TODO confirm, otherwise remove
 
 # Now restart and run other scripts
