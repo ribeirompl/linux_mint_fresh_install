@@ -164,6 +164,11 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb && \
 print2screen "Installing VSCode"
 sudo apt install snapd -y && \
 sudo snap install --classic code
+# Install powerline fonts for oh-my-zsh in VS Code
+wget "https://github.com/abertsch/Menlo-for-Powerline/raw/master/Menlo for Powerline.ttf" && \ 
+mkdir $HOME/.fonts && \
+mv "Menlo for Powerline.ttf" $HOME/.fonts/ && \
+fc-cache -vf ~/.fonts
 
 print2screen "Installing xclip"
 sudo apt-get install xclip -y
