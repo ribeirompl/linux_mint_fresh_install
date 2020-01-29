@@ -157,9 +157,20 @@ print2screen "Installing Okular PDF reader"
 sudo apt install okular -y
 
 print2screen "Installing Google Chrome"
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-sudo dpkg -i google-chrome-stable_current_amd64.deb && \
-\rm google-chrome-stable_current_amd64.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O /tmp/google-chrome-stable.deb && \
+sudo dpkg -i /tmp/google-chrome-stable.deb && \
+\rm /tmp/google-chrome-stable.deb
+
+print2screen "Installing GIMP"
+sudo apt-get install -y gimp
+
+print2screen "Installing VLC"
+sudo apt-get install -y vlc
+
+print2screen "Installing virtual-box"
+wget https://download.virtualbox.org/virtualbox/5.2.36/virtualbox-5.2_5.2.36-135684~Ubuntu~bionic_amd64.deb -O /tmp/virtual-box.deb && \
+sudo dpkg -i /tmp/virtual-box.deb && \
+rm /tmp/virtual-box.deb
 
 print2screen "Installing VSCode"
 sudo apt install snapd -y && \
@@ -184,7 +195,10 @@ chsh -s $(which zsh) # Change default shell
 sudo apt install autojump -y && \
 \cp ./installation_file/.zshrc ~/.zshrc
 
-print2screen "Installing python3-dev"
-sudo apt-get install python3-dev # for compiling (make) some python packages in Github? #TODO confirm, otherwise remove
+# print2screen "Installing python3-dev"
+# sudo apt-get install python3-dev # for compiling (make) some python packages in Github? #TODO confirm, otherwise remove
+
+sudo apt-get autoremove -y
+sudo apt-get autoclean -y
 
 # Now restart and run other scripts
