@@ -10,7 +10,7 @@
         "max": 60,
         "step": 1,
         "description": "Pomodoro Duration:  ",
-        "value": 25
+        "value": 25.0
     },
     "short_break_duration": {
         "type": "scale",
@@ -19,7 +19,7 @@
         "max": 15,
         "step": 1,
         "description": "Short Break Duration:  ",
-        "value": 5
+        "value": 5.0
     },
     "long_break_duration": {
         "type": "scale",
@@ -28,7 +28,7 @@
         "max": 60,
         "step": 1,
         "description": "Long Break Duration:  ",
-        "value": 15
+        "value": 15.0
     },
     "pomodori_number": {
         "type": "scale",
@@ -37,7 +37,7 @@
         "max": 10,
         "step": 1,
         "description": "Number of pomodori before long break:  ",
-        "value": 4
+        "value": 4.0
     },
     "head_options": {
         "type": "header",
@@ -47,7 +47,7 @@
         "type": "checkbox",
         "description": "Show Dialog Messages",
         "default": true,
-        "value": true
+        "value": false
     },
     "auto_start_after_short_break_ends": {
         "type": "checkbox",
@@ -113,7 +113,7 @@
         "default": "deskbell.wav",
         "select-dir": false,
         "dependency": "break_sound",
-        "value": "deskbell.wav"
+        "value": "file://~/.cinnamon/configs/pomodoro@gregfreeman.org/break_audio.wav"
     },
     "break_sound_volume": {
         "type": "scale",
@@ -171,7 +171,7 @@
         "default": "deskbell.wav",
         "select-dir": false,
         "dependency": "start_sound",
-        "value": "deskbell.wav"
+        "value": "file://~/.cinnamon/configs/pomodoro@gregfreeman.org/start_audio.wav"
     },
     "start_sound_volume": {
         "type": "scale",

@@ -1,3 +1,13 @@
+echo -e "\033[1;36mInstalling Pynetkey\033[0m"
+
+####### Start script #######
+echo -e -n "\033[1;36mRun Pynetkey setup script? (y/n) \033[0m" && read -r REPLY
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
+    # handle exits from shell or function but don't exit interactive shell
+fi
+
 wget https://bitbucket.org/janto/pynetkey/get/tip.zip -O pynetkey.zip && \
 mkdir -p $HOME/.pynetkey/ && \
 # bsdtar is used to remove the top-level directory in the zip file

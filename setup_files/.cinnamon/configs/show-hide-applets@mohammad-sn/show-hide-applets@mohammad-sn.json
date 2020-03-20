@@ -8,7 +8,7 @@
         "default": true,
         "description": "Autohide",
         "tooltip": "check if you want to hide applets automatically, unless you should click on applet to do so",
-        "value": false
+        "value": true
     },
     "disablestarttimeautohide": {
         "type": "checkbox",

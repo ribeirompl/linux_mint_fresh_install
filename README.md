@@ -2,24 +2,23 @@
 
 A script for setting my favourite settings and installing applications onto a fresh Linux Mint installation.
 
-The repository contains 2 scripts:
-+ `general_setup_script.sh`
-This installs general applications and changes system settings.
-+ `git_setup_script.sh`
-This sets up git's commit email and username as well as an ssh key for connecting to Github.
-+ `conda_setup_script.sh`
-This sets up Anaconda and installs some packages.
+## To use
+`sudo apt install git -y`
+`git clone https://github.com/ribeirompl/linux_mint_setup_script.git`
+
+The repository contains a couple scripts...
++ A couple
 + `pynetkey_setup_script.sh`
 This sets up Pynetkey as well as a desktop icon to easily run it.
 
 ## Pre-script steps:
 + Launch Driver Manager to install relevant drivers.
 
-## To run the script:
+## To run the scripts:
 Ensure that the script has execute permissions:
-`chmod 744 ./setup_script.sh`
+`chmod 744 ./cinnamon_settings.sh`
 
-Then run it within bash: `./general_setup_script.sh`
+Then run it within bash: `./cinnamon_settings.sh`
 
 ## Post-script steps:
 + Restart PC
@@ -34,6 +33,7 @@ Then run it within bash: `./general_setup_script.sh`
 + Hold alt, then use left click to drag window, or right click to resize
 + Super+F to open Firefox
 + Super+C to open Chrome
++ Super+V to open VS Code
 + Super+D to show Desktop
 + Super+M to minimise the current application.
 + Ctrl+Shift+Esc to open System Monitor
@@ -55,21 +55,11 @@ Then run it within bash: `./general_setup_script.sh`
         + Thunderbird Mail
     + Start redshift service and enable autostart.
     + Remove shortcuts to: show desktop.
-    + Anaconda/Jupyter-Notebooks (and various conda packages)
-    + gtypist (For improving touch typing)
-    + Imagemagick
-    + Inkscape
-    + Kdenlive
-    + GIMP
-    + OBS
-    + openssh
     + docker (Maybe through VS code)
     + texlive (LaTeX)
-    + vim
-    + VLC media player
     + Other oh-my-zsh plugins (colorize, command-not-found, dircycle, fasd)
     + oh-my-zsh default prompt setting
     + rsync
     + Set default applications for filetypes such as .md (Markdown)
-    + Create relevant home directories such as "Development" and add to Nemo sidebar
+    + Create relevant home directories such as "projects" and add to Nemo sidebar
 + Add a restart computer prompt at the end of the script.
