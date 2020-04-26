@@ -68,6 +68,9 @@ sudo snap install obs-studio -y
 print2screen "Installing VLC"
 sudo apt-get install vlc -y
 
+print2screen "Installing Rclone"
+curl https://rclone.org/install.sh | sudo bash
+
 print2screen "Installing spotify"
 sudo snap install spotify -y
 
