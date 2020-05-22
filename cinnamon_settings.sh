@@ -75,6 +75,7 @@ dconf write /org/cinnamon/enabled-applets "['panel1:left:0:menu@cinnamon.org:41'
 print2screen "Changing misc. Cinnamon settings"
 touch $HOME/.linuxmint/mintwelcome/norun.flag # Disable welcome screen at startup
 dconf write /org/cinnamon/desktop/interface/clock-show-date true
+dconf write /org/cinnamon/muffin/tile-maximize true
 dconf write /org/nemo/desktop/volumes-visible false
 dconf write /org/nemo/desktop/home-icon-visible false
 dconf write /org/nemo/desktop/computer-icon-visible false
